@@ -48,12 +48,12 @@ spec:
           livenessProbe:
             httpGet:
               # TeamCity responds with 401 or 503 so we check the icon instead
-              path: /favicon.ico
+              path: /img/icons/favicon.ico
               port: http
             initialDelaySeconds: 180
           readinessProbe:
             httpGet:
-              path: /favicon.ico
+              path: /img/icons/favicon.ico
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
